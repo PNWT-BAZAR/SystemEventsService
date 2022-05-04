@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @Entity
 @Table
 @NoArgsConstructor
-public class SystemEvents {
+public class SystemEvent {
 
     @Id
     @GeneratedValue(generator = "uuid")
@@ -26,7 +26,7 @@ public class SystemEvents {
     private String microservice;
     private String actionType;
 
-    public SystemEvents(LocalDateTime timestamp, String microservice, String actionType) {
+    public SystemEvent(LocalDateTime timestamp, String microservice, String actionType) {
         this.timestamp = timestamp;
         this.microservice = microservice;
         this.actionType = actionType;

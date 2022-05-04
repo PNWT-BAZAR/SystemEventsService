@@ -1,0 +1,19 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "com.unsa.etf.SystemEventsService";
+package proto;
+
+service ReportSystemEvent {
+    // Sends a greeting
+    rpc reportSystemEvent (SystemEventRequest) returns (SystemEventResponse) {}
+}
+
+message SystemEventRequest{
+    string microserviceName = 1;
+    string actionType = 2;
+    string resourceName = 3;
+}
+
+message SystemEventResponse{
+    string responseType = 1;
+}
