@@ -3,17 +3,19 @@ option java_multiple_files = true;
 option java_package = "com.unsa.etf.SystemEventsService";
 package proto;
 
-service ReportSystemEvent {
+service LoggingService {
     // Sends a greeting
-    rpc reportSystemEvent (SystemEventRequest) returns (SystemEventResponse) {}
+    rpc loggingService (LogRequest) returns (LogResponse) {}
 }
 
-message SystemEventRequest{
+message LogRequest{
     string microserviceName = 1;
     string actionType = 2;
     string resourceName = 3;
+    string username = 4;
+    string responseType = 5;
 }
 
-message SystemEventResponse{
+message LogResponse{
     string responseType = 1;
 }

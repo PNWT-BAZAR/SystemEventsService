@@ -25,10 +25,16 @@ public class SystemEvent {
     private LocalDateTime timestamp;
     private String microservice;
     private String actionType;
+    private String username;
+    private String responseType;
+    private String resourceName;
 
-    public SystemEvent(LocalDateTime timestamp, String microservice, String actionType) {
+    public SystemEvent(LocalDateTime timestamp, String microservice, String actionType, String username, String responseType, String resourceName) {
         this.timestamp = timestamp;
         this.microservice = microservice;
         this.actionType = actionType;
+        this.username = username;
+        this.responseType = responseType;
+        this.resourceName = resourceName;
     }
 }
